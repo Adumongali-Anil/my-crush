@@ -26,11 +26,13 @@ body {
 .container {
   text-align: center;
   max-width: 600px;
+  width: 90%;
   padding: 20px;
   background-color: #f2cbee;
   box-shadow: 10px 400px 800px rgba(202, 22, 193, 0.2);
   border-radius: 8px;
   position: relative;
+  margin: 20px;
 }
 
 .container::before,
@@ -99,3 +101,52 @@ button:hover {
 
 .heart-1 { left: -20px; top: 20%; animation-delay: 0s; }
 .heart-2 { right: -20px; top: 30%; animation-delay: 0.7s; }
+
+/* Add responsive design */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+
+  /* Adjust heart positions for mobile */
+  .heart-1 { left: -15px; }
+  .heart-2 { right: -15px; }
+  
+  .container::before,
+  .container::after {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  button {
+    padding: 8px 14px;
+    font-size: 0.85em;
+  }
+}
